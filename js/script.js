@@ -3,8 +3,7 @@ const rootElement = document.documentElement;
 
 if (themeToggleButton) {
   const preferredTheme = localStorage.getItem('theme');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = preferredTheme || (systemPrefersDark ? 'dark' : 'light');
+  const initialTheme = preferredTheme === 'dark' || preferredTheme === 'light' ? preferredTheme : 'light';
 
   const applyTheme = (theme) => {
     rootElement.setAttribute('data-theme', theme);
