@@ -140,7 +140,7 @@ const injectFloatingWhatsAppButton = () => {
   floatingButton.href = 'https://wa.me/919876543210';
   floatingButton.target = '_blank';
   floatingButton.rel = 'noopener';
-  floatingButton.className = 'floating-whatsapp';
+  floatingButton.className = 'floating-whatsapp whatsapp-float';
   floatingButton.setAttribute('aria-label', 'Chat on WhatsApp');
   floatingButton.setAttribute('title', 'Chat on WhatsApp');
   floatingButton.innerHTML = `
