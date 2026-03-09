@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="About placeholder">
+  <rect width="900" height="700" fill="#F3F4F6"/>
+  <rect x="60" y="60" width="780" height="580" rx="24" fill="#E5E7EB"/>
+  <rect x="130" y="150" width="320" height="320" rx="20" fill="#CBD5E1"/>
+  <rect x="500" y="180" width="240" height="34" rx="9" fill="#94A3B8"/>
+  <rect x="500" y="240" width="220" height="28" rx="8" fill="#CBD5E1"/>
+  <rect x="500" y="286" width="250" height="28" rx="8" fill="#CBD5E1"/>
+  <rect x="500" y="332" width="200" height="28" rx="8" fill="#CBD5E1"/>
+  <text x="450" y="615" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" fill="#475569">Replace with your business/about image</text>
+</svg>

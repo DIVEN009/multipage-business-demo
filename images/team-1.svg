@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" role="img" aria-label="Team member placeholder 1">
+  <rect width="500" height="500" fill="#E0E7FF"/>
+  <circle cx="250" cy="190" r="90" fill="#A5B4FC"/>
+  <rect x="140" y="290" width="220" height="140" rx="60" fill="#818CF8"/>
+  <text x="250" y="470" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" fill="#3730A3">Team Member</text>
+</svg>
