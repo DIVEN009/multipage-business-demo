@@ -253,11 +253,21 @@ p {
   background: linear-gradient(170deg, rgba(37, 99, 235, 0.09) 0%, rgba(16, 185, 129, 0.06) 38%, transparent 80%);
 }
 
+.hero h1 {
+  font-size: clamp(2.5rem, 7vw, 4.2rem);
+  font-weight: 800;
+  max-width: 14ch;
+}
+
 .hero-grid,
 .two-col {
   display: grid;
   gap: clamp(1.5rem, 3.2vw, 3rem);
   align-items: center;
+}
+
+.hero-grid {
+  gap: clamp(2rem, 5vw, 4rem);
 }
 
 .contact-grid {
@@ -271,6 +281,12 @@ p {
 .rounded-img {
   border-radius: calc(var(--radius) + 4px);
   box-shadow: var(--shadow-lg);
+}
+
+.hero-image {
+  width: 100%;
+  min-height: clamp(280px, 42vw, 520px);
+  object-fit: cover;
 }
 
 .button-group {
@@ -343,6 +359,11 @@ p {
   border-color: rgba(37, 99, 235, 0.32);
 }
 
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
 .icon {
   width: 46px;
   height: 46px;
@@ -357,6 +378,13 @@ p {
 .testimonial h4 {
   margin: 0.9rem 0 0;
   color: var(--primary);
+}
+
+.stars {
+  color: #F59E0B;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
 }
 
 .cta-section {
@@ -412,6 +440,7 @@ p {
   border-radius: 16px;
   transition: transform 0.34s ease, filter 0.3s ease;
   box-shadow: var(--shadow-sm);
+  cursor: zoom-in;
 }
 
 .gallery-grid img:hover {
@@ -514,6 +543,7 @@ p {
 .site-footer h4 {
   color: var(--footer-heading);
   margin-bottom: 0.9rem;
+  font-size: 1.15rem;
 }
 
 .site-footer p,
@@ -600,6 +630,42 @@ p {
   width: 28px;
   height: 28px;
   fill: currentColor;
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.82);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1700;
+}
+
+.gallery-lightbox.open {
+  display: flex;
+}
+
+.gallery-lightbox img {
+  max-width: min(94vw, 1080px);
+  max-height: 86vh;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(15, 23, 42, 0.4);
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 @keyframes whatsapp-pulse {

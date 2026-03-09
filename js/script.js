@@ -167,5 +167,54 @@ const injectFloatingWhatsAppButton = () => {
   footerObserver.observe(footer);
 };
 
+const setupGalleryLightbox = () => {
+  const galleryImages = document.querySelectorAll('.gallery-grid img');
+
+  if (galleryImages.length === 0) {
+    return;
+  }
+
+  const lightbox = document.createElement('div');
+  lightbox.className = 'gallery-lightbox';
+  lightbox.innerHTML = `
+    <button class="gallery-lightbox-close" type="button" aria-label="Close image preview">×</button>
+    <img src="" alt="Gallery preview image" />
+  `;
+
+  const lightboxImage = lightbox.querySelector('img');
+  const closeButton = lightbox.querySelector('.gallery-lightbox-close');
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  galleryImages.forEach((image) => {
+    image.addEventListener('click', () => {
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+
+  document.body.appendChild(lightbox);
+};
+
 injectFooterSocialIcons();
 injectFloatingWhatsAppButton();
+setupGalleryLightbox();
