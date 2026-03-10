@@ -138,7 +138,7 @@ p {
   background: var(--header-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
 .navbar {
@@ -313,8 +313,13 @@ p {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   opacity: 0.98;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary {
@@ -395,6 +400,7 @@ p {
 .cta {
   text-align: center;
   max-width: 760px;
+  padding: 80px 20px;
 }
 
 .map-wrap,
@@ -439,14 +445,13 @@ p {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 16px;
-  transition: transform 0.4s ease, filter 0.3s ease;
+  transition: transform 0.4s ease;
   box-shadow: var(--shadow-sm);
   cursor: zoom-in;
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.055);
-  filter: saturate(1.08);
+  transform: scale(1.05);
 }
 
 .gallery img {
